@@ -1,0 +1,29 @@
+Docker file is a set of instructions which are used to build an docker image.
+
+
+Docker file ---<docker build>--> docker image
+
+Dockerfile : 
+A text file with instructions to build image
+Automation of Docker Image Creation
+
+FROM
+RUN
+CMD
+
+Step 1 : Create a file named Dockerfile
+
+Step 2 : Add instructions in Dockerfile
+
+Step 3 : Build dockerfile to create image
+
+Step 4 : Run image to create container
+
+COMMANDS
+: docker build <path to docker file> 
+: docker build -t ImageName:Tag directoryOfDocekrfile  <docker build -t myimage_ubuntu1:1.0 .>
+: docker run image_id
+
+References - 
+https://github.com/wsargent/docker-cheat-sheet#dockerfile
+https://docs.docker.com/engine/reference/builder/#environment-replacement

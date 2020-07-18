@@ -1,0 +1,11 @@
+Minikube
+kubeadm
+-------
+play-with-k8s.com
+-------
+1. minikube - 
+ - single node k8 cluster, (minikube.exe)
+ - https://kubernetes.io/docs/tasks/tools/install-minikube/
+-------
+2. kubeadm - 
+ - 

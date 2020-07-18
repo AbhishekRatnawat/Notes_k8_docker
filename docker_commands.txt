@@ -1,0 +1,64 @@
+docker hub login - abhidoc08/Abc*12345
+
+Basic
+: docker version -> details of docker
+: docker -v or --version -> Docker version
+: docker info -> details info of docker including status of running containers and images
+: docker --help -> to get info of any other docker commands. <docker images --help>
+: docker login -> To login into hub.docker.com  - CLI login via docker_id/password
+————————————
+Images
+: docker images -> list all the images we have in the docker- we can search for images in the docker hub - <docker images --help>
+: docker pull -> to pull the images from docker <docker pull <image_name>:tag> - if no tag it will pick the latest image
+: docker rmi -> to remove images <see docker rmi --help>
+: docker images --help
+: docker pull image
+: docker images
+: docker images -q
+: docker images -f “dangling=false” -> get the images those are not running or tagged for any container.
+: docker images -f “dangling=false” -q -> get the image_id those are not running or tagged for any container.
+: docker run image -> Running a image is called creating the container.
+: docker rmi image
+: docker rmi -f image
+: docker inspect
+: docker history imageName
+————————————
+Containers
+: docker ps -> List of containers <see docker ps --help>
+: docker run -> It will run the container with the image - suppose you have an image "crate" - <docker run crate>, if crate is present, it will               search and pull it from docker hub
+: docker run -it <image_name> sh -> to run the container from it's image - open it's shell <interative mode> - after this when you do 
+                                   <docker ps> -> it will give list of running containers
+: docker run --name <specific_name> -it <image> sh -> to run the container with your given name 
+: docker start -> to start docker container with container_id < docker start <container_id> >
+: docker stop -> to stop docker container with container_id < docker stop <container_id> >
+: docker ps
+: docker run ImageName
+: docker start ContainerName/ID
+: docker stop ContainerName/ID
+: docker pause ContainerName/ID -> cotainer will stop taking commands
+: docker unpause  ContainerName/ID
+: docker top ContainerName/ID
+: docker stats ContainerName/ID
+: docker attach ContainerName/ID -> attach to your running container and run commands
+: docker kill ContainerName/ID
+: docker rm ContainerName/ID
+: docker history ImageName/ID
+
+————————————
+System
+: docker stats -> gives memory/usage/cpu info of the running containers.
+: docker system df -> gives the disk usage with running containers
+: docker system prune -> Remove unused data <see docker system prune --help>, this will all stopped container , it will warning before 
+                        performing any operation
+References - 
+https://hub.docker.com/
+https://docs.docker.com/engine/refere...
+https://docs.docker.com/engine/reference/commandline/ps/
+_________________
+Build  a docker image for your app - 
+: make a file with name Dockerfile
+: put commands in it to run your application
+: save the file and run : docker build .
+To push image in the docker hub within your account - 
+: docker build . -t <account_name>/<image_name>
+

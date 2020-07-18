@@ -1,0 +1,29 @@
+sudo apt-get install openssh-server --open ssh server on linux system
+-----------------
+Nodes - 
+ - worker Node is a machine phy or vm on which kubernetes will be installed. A node is a worker machine on which containers are launched by kubernetes. 
+ - CLuster is a group nodes. Multiples nodes so that load  balancing and failures can be handled.
+ - Master  - Master is a node which watches over the cluster on the worker nodes.
+--------------------
+Components - 
+ API server - Acts as a forntend for k8s.
+ etcd - key value store, stores all the data use to manage the cluster.
+ scheduler - assign the work load.
+ Controller - brain, makes decision and manages which container has to be bring up and down
+ Container runtime - work of docker as runtime engine.
+ kubelet - It is kind of a agent which makes sure containers are running over the cluster as expected.
+-------------------
+2 types of server - MASTER and Worker Node
+
+MASTER - 					Worker Node - 
+ - Kube-apiserver			 - Kubelet
+ - etcd					 - container runtime - docker
+ - controller
+ - schedular 
+-------------------
+kubectl - command line utility, manager k8 activities with this
+
+few command - 
+ - kubectl run hello-minikube - use to deploy an app on cluster
+ - kubectl cluster-info - use to get info kube cluster
+ - kubectl get nodes - get nodes which are part of cluster
